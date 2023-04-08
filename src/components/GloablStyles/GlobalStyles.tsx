@@ -8,11 +8,20 @@ export const GlobalStyles = createGlobalStyle`
     --primary-black: #151515;
     --secondary-black: #242424;
     --gray: #d9d9d9;
+    --xl: 88px;
+    --l: 48px;
+    --m: 24px;
+    --regular: 500;
+    --bold: 700;
 }
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+body {
+    font-size: 18px;
+    font-weight: 500;
 }
 img {
     width: 100%;
@@ -25,7 +34,12 @@ a {
 }
 input {
     border: none;
+    border-bottom: var(--gray);
     background-color: transparent;
+    outline: 0;
+    :focus {
+        border-bottom: var(--green);
+    }
 }
 button {
     border: none;
